@@ -45,5 +45,14 @@ public class MainController {
 		
 		return "/index";
 	}
-
+	
+	@GetMapping("/include")
+	public String include() {
+		return "/include";
+	}
+	@GetMapping("/layout")
+	public String layout() {
+		return "/layout";
+	}
+	
 }
