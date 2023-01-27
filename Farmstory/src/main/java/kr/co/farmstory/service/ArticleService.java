@@ -2,11 +2,13 @@ package kr.co.farmstory.service;
 
 import kr.co.farmstory.dao.ArticleDAO;
 import kr.co.farmstory.vo.ArticleVO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service
 public class ArticleService {
 
@@ -17,8 +19,8 @@ public class ArticleService {
         return dao.selectArticles(cate, start);
     }
 
-    public int selectCountTotal(){
-        return dao.selectCountTotal();
+    public int selectCountTotal(String cate){
+        return dao.selectCountTotal(cate);
     }
 
 

@@ -11,8 +11,8 @@ import java.util.List;
 @Repository
 public interface ArticleDAO {
 
-    public List<ArticleVO> selectArticles(@Param("cate") String cate,int start);
+    public List<ArticleVO> selectArticles(@Param("cate")String cate, @Param("start")int start);
 
-    public int selectCountTotal();
+    public int selectCountTotal(String cate);
 
 }

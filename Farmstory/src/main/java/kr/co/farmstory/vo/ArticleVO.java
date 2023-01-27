@@ -20,9 +20,7 @@ public class ArticleVO {
     private int hit;
     private String uid;
     private String regip;
-    private String rdate(){
-        return rdate().substring(2, 10);
-    }
+    private String rdate;
 
     // 추가필드
     private String nick;

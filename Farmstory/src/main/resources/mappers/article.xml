@@ -69,7 +69,7 @@
     </select>
 
     <select id="selectCountTotal" resultType="int">
-        select count(`no`) from `board_article` where `parent`=0;
+        select count(`no`) from `board_article` where `parent`=0 and `cate`=#{cate};
     </select>
 
     <select id="selectFile" resultType="kr.co.farmstory.vo.FileVO">

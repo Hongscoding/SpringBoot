@@ -14,7 +14,7 @@
             <td>[[${pageStartNum - i.index}]]</td>
             <td><a th:href="@{/view(no=${article.no})}">[[${article.title}]] &#91;[[${article.comment}]]&#93;</a></td>
             <td>[[${article.nick}]]</td>
-            <td>[[${article.rdate}]]</td>
+            <td>[[${article.rdate.substring(2,10)}]]</td>
             <td>[[${article.hit}]]</td>
         </tr>
     </table>
