@@ -13,6 +13,6 @@ import kr.co.swiftER.vo.ErSearchSubCateVO;
 public interface ErSerachDAO {
 	
 	public List<ErSearchCateVO> selectErCate();
-	public List<ErSearchSubCateVO> selectErSubCate();
+	public List<ErSearchSubCateVO> selectErSubCate(int city);
 	
 }

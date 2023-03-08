@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>응급실 검색</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
@@ -11,8 +14,32 @@
     <link rel="stylesheet" href="/swiftER/css/search/style.css"/>
 </head>
 <script>
+$(document).ready(function () {
 
+	$('select[name=city]').on('change', function(){
+		let city =$(this).val();
+		subregion(city);
+	});
 	
+});	
+function subregion(city){
+	let jsonData = {"city":city}
+	$.ajax({
+		url:'/swiftER/search/subregion',
+		method:'POST',
+		dataType:'json',
+		data:jsonData,
+		success:(data)=>{
+	    	let subregion = $('select[name=town]');
+	    	subregion.children().remove();
+	    	let tag = `<option value="">전체</option>`;
+	    	data.forEach(async data => {
+	        	tag += `<option th:value="${data.subregion_code}" th:text="${data.subregion}"></option>`;
+	    	});
+	    subregion.append(tag);
+		}
+	});
+}	
 
 </script>
 <body>
@@ -63,19 +90,13 @@
                         <div>
                             <fieldset class="location">
                             <legend>위치 조건</legend>
-                            <select name="city" id="city">
+                            <select name="city">	
                             <option value="전체">전체</option>
                             <th:block th:each="region, i:${region}">
-                                <option th:value="${region.region}">[[${region.region}]]</option>
+                                <option th:value="${region.region_code}" id="region">[[${region.region}]]</option>
                             </th:block>
                             </select>
-                            <select name="town" id="town">
-                            <option value="전체">전체</option>
-                            <th:block th:each="sub, i:${sub}">
-    	                        <th:block th:if="${region.region_code} == ${sub.region_code}">
-        	                        <option th:value="${sub.subregion}">[[${sub.subregion}]]</option>
-	                            </th:block>
-                            </th:block>
+                            <select name="town">		
                             </select>
                             </fieldset>
                             <fieldset class="med-department">

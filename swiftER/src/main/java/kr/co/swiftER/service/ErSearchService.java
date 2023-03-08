@@ -19,8 +19,8 @@ public class ErSearchService {
 		return dao.selectErCate();
 	}
 	
-	public List<ErSearchSubCateVO> selectErSubCate(){
-		return dao.selectErSubCate();
+	public List<ErSearchSubCateVO> selectErSubCate(int city){
+		return dao.selectErSubCate(city);
 	}
 	
 	
