@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter"/>
-    <fullyQualifiedTypeName name="org.springframework.security.web.util.matcher.AntPathRequestMatcher"/>
-    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
-    <fullyQualifiedTypeName name="javax.persistence.Table"/>
-    <fullyQualifiedTypeName name="javax.persistence.Id"/>
-    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
-    <fullyQualifiedTypeName name="kr.co.Ch08.repository.User2Repo"/>
-    <fullyQualifiedTypeName name="kr.co.Ch08.vo.User2VO"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="kr.co.Ch08.repository.User3Repo"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetailsService"/>
@@ -33,16 +25,9 @@
     <fullyQualifiedTypeName name="org.slf4j.Logger"/>
     <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
     <fullyQualifiedTypeName name="lombok.extern.slf4j.Slf4j"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="kr.co.sboard.dao.ArticleDAO"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="kr.co.sboard.vo.ArticleVO"/>
     <fullyQualifiedTypeName name="kr.co.sboard.service.ArticleService"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="java.security.Principal"/>
     <fullyQualifiedTypeName name="org.apache.tomcat.jni.File"/>
@@ -60,4 +45,19 @@
     <fullyQualifiedTypeName name="kr.co.sboard.vo.FileVo"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+    <fullyQualifiedTypeName name="kr.co.swiftER.vo.SearchErCateVO"/>
+    <fullyQualifiedTypeName name="kr.co.swiftER.vo.SearchErSubCateVO"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="java.lang.AutoCloseable"/>
+    <fullyQualifiedTypeName name="kr.co.swiftER.dao.ErSerachDAO"/>
+    <fullyQualifiedTypeName name="kr.co.swiftER.vo.ErSearchCateVO"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="kr.co.swiftER.service.ErSearchService"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="kr.co.swiftER.vo.ErSearchSubCateVO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
 </qualifiedTypeNameHistroy>
