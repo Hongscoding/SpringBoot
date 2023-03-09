@@ -12,7 +12,7 @@
     </select>
 
     <select id="selectErSubCate" resultType="kr.co.swiftER.vo.ErSearchSubCateVO">
-    	select * from `search_er_subcate` where `region_code` = #{city};
+    	select * from `search_er_subcate` where `region` = #{city};
     </select>
 
 
