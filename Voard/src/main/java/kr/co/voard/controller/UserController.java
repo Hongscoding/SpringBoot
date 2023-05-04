@@ -42,8 +42,8 @@ public class UserController {
 	
 	@Autowired
 	private UserService service;
-
-
+	
+	
 	@GetMapping("/user/terms")
 	public TermsVO terms() {		
 		return service.selectTerms();
@@ -56,7 +56,7 @@ public class UserController {
 	
 	@GetMapping("/user/countUid")
 	public int countUid(String uid) {
-		return service.countUser(uid);
+		return service.countUid(uid);
 	}
 	
 	@PostMapping("/user/login")
@@ -82,7 +82,7 @@ public class UserController {
 		
 		Map<String, Object> resultMap = new HashMap<>();
 		resultMap.put("accessToken", token);
-		resultMap.put("user", user); //사용자 인증정보 객체(아이디, 이름, 이메일 ...)
+		resultMap.put("user", user);
 		
 		return resultMap;		
 	}

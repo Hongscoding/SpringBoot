@@ -21,5 +21,5 @@ public interface ArticleDAO {
 	public int updateFileDownload(int fno);
 	public int updateArticle(ArticleVO vo);
 	public int deleteArticle(int no);
-
+	
 }
